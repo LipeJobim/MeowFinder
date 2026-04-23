@@ -1,23 +1,23 @@
-# 🐱 MeowFinder
+# MeowFinder
 
 Aplicação web para adoção de gatos, desenvolvida com React + TypeScript + Vite.
 
-## 🚀 Funcionalidades
+# Funcionalidades
 - Listagem de gatos
-- Sistema de favoritos ❤️ (localStorage)
+- Sistema de favoritos (localStorage)
 - Interface responsiva
 - Feedback visual ao adotar
 
-## 🛠️ Tecnologias
+## Tecnologias
 - React
 - TypeScript
 - Vite
 - CSS
 
 ## 📸 Preview
-(cola print aqui depois)
+![Home](src/assets/index.png)
 
-## ▶️ Como rodar
+## Como rodar
 
 ```bash
 yarn
