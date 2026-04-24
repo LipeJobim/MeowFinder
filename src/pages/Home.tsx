@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { cats } from "../data/cats";
 
 export function Home() {
-  
   const [favoritos, setFavoritos] = useState<string[]>(() => {
     const saved = localStorage.getItem("favoritos");
     return saved ? JSON.parse(saved) : [];
@@ -23,8 +22,15 @@ export function Home() {
     );
   };
 
-  const handleAdotar = (nome: string) => {
-    setMensagem(`🐱 Você adotou ${nome}! ele está louco para conhecer seu novo lar ❤️`);
+ 
+  const handleAdotar = (nome: string, gender: "male" | "female") => {
+    const pronome = gender === "male" ? "Ele" : "Ela";
+    const empolgado = gender === "male" ? "louco" : "louca";
+
+    setMensagem(
+      `🐱 Você adotou ${nome}! ${pronome} está ${empolgado} para conhecer seu novo lar ❤️`
+    );
+
     setTimeout(() => setMensagem(""), 3000);
   };
 
@@ -68,7 +74,7 @@ export function Home() {
 
               <button
                 className="adotar-btn"
-                onClick={() => handleAdotar(cat.name)}
+                onClick={() => handleAdotar(cat.name, cat.gender)}
               >
                 🐾 Adotar {cat.name}
               </button>
