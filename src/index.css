@@ -701,7 +701,7 @@ body {
 [data-theme="dark"] .filters input,
 [data-theme="dark"] .filters select,
 [data-theme="dark"] .filters-dropdown {
-  background: #1a1a2e;
+  background: none;
   color: white;
   border-color: #2d2d44;
 }
@@ -724,7 +724,7 @@ body {
 }
 
 [data-theme="dark"] .favorite-filter-btn {
-  background: #1a1a2e;
+  background: none;
   color: #a5d6a7;
   border-color: #2d2d44;
 }
