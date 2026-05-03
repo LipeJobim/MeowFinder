@@ -40,6 +40,7 @@ const RAW_RUNTIME_STATE =
           ["meowfinder", "workspace:."],\
           ["react", "npm:19.2.5"],\
           ["react-dom", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:19.2.5"],\
+          ["react-icons", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:5.6.0"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["typescript-eslint", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:8.59.0"],\
           ["vite", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:8.0.10"]\
@@ -1892,6 +1893,7 @@ const RAW_RUNTIME_STATE =
           ["meowfinder", "workspace:."],\
           ["react", "npm:19.2.5"],\
           ["react-dom", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:19.2.5"],\
+          ["react-icons", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:5.6.0"],\
           ["typescript", "patch:typescript@npm%3A6.0.3#optional!builtin<compat/typescript>::version=6.0.3&hash=5786d5"],\
           ["typescript-eslint", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:8.59.0"],\
           ["vite", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:8.0.10"]\
@@ -2127,6 +2129,28 @@ const RAW_RUNTIME_STATE =
           ["react", "npm:19.2.5"],\
           ["react-dom", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:19.2.5"],\
           ["scheduler", "npm:0.27.0"]\
+        ],\
+        "packagePeers": [\
+          "@types/react",\
+          "react"\
+        ],\
+        "linkType": "HARD"\
+      }]\
+    ]],\
+    ["react-icons", [\
+      ["npm:5.6.0", {\
+        "packageLocation": "../../../AppData/Local/Yarn/Berry/cache/react-icons-npm-5.6.0-797edf502d-10c0.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["react-icons", "npm:5.6.0"]\
+        ],\
+        "linkType": "SOFT"\
+      }],\
+      ["virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:5.6.0", {\
+        "packageLocation": "./.yarn/__virtual__/react-icons-virtual-2117d1a777/4/AppData/Local/Yarn/Berry/cache/react-icons-npm-5.6.0-797edf502d-10c0.zip/node_modules/react-icons/",\
+        "packageDependencies": [\
+          ["@types/react", "npm:19.2.14"],\
+          ["react", "npm:19.2.5"],\
+          ["react-icons", "virtual:c87bc2e899323507f852898b71588298ffa86846ef2d6582b1f83eed8071dc4e093c8054d645a8362a3f88fe3cda0f7f6bb907775e633380317192dfe3505052#npm:5.6.0"]\
         ],\
         "packagePeers": [\
           "@types/react",\
