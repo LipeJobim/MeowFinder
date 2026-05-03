@@ -1,7 +1,6 @@
 // src/pages/Home.tsx
 import { useEffect, useState } from "react";
 import { cats } from "../data/cats";
-
 import { Header } from "../components/Header";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -18,12 +17,11 @@ export function Home() {
   const [genderFilter, setGenderFilter] = useState("");
   const [sortAge, setSortAge] = useState("");
   const [search, setSearch] = useState("");
+  const [showOnlyFavorites, setShowOnlyFavorites] = useState(false); // 🆕 NOVO
 
-  
   useEffect(() => {
     localStorage.setItem("favoritos", JSON.stringify(favoritos));
   }, [favoritos]);
-
 
   const toggleFavorito = (id: string) => {
     setFavoritos((prev) =>
@@ -31,7 +29,6 @@ export function Home() {
     );
   };
 
-  
   const handleAdotar = (nome: string, gender: "male" | "female") => {
     const pronome = gender === "male" ? "Ele" : "Ela";
     setMensagem(`🐱 Você adotou ${nome}! ${pronome} está muito feliz com o novo lar ❤️`);
@@ -41,9 +38,16 @@ export function Home() {
  
   const filteredCats = cats
     .filter((cat) => {
+    
       const genderMatch = genderFilter === "" || cat.gender === genderFilter;
+      
+      
       const searchMatch = cat.name.toLowerCase().includes(search.toLowerCase());
-      return genderMatch && searchMatch;
+      
+    
+      const favoriteMatch = !showOnlyFavorites || favoritos.includes(cat.id);
+      
+      return genderMatch && searchMatch && favoriteMatch;
     })
     .sort((a, b) => {
       if (sortAge === "older") return b.age - a.age;
@@ -53,7 +57,8 @@ export function Home() {
 
   return (
     <>
-     
+      <Header />
+
       <Navbar>
         <div className="filters">
           <input
@@ -74,17 +79,32 @@ export function Home() {
             <option value="older">⬆️ Mais velhos</option>
             <option value="younger">⬇️ Mais novos</option>
           </select>
+
+       
+          <button
+            className={`favorite-filter-btn ${showOnlyFavorites ? "active" : ""}`}
+            onClick={() => setShowOnlyFavorites(!showOnlyFavorites)}
+          >
+            {showOnlyFavorites ? "❤️ Mostrando favoritos" : "🤍 Mostrar só favoritos"}
+          </button>
         </div>
       </Navbar>
-
-      
-      <Header />
 
       <div className="container">
         {mensagem && <div className="toast">{mensagem}</div>}
 
-        {favoritos.length > 0 && (
-          <div className="favorito-counter">❤️ Você tem {favoritos.length} gato(s) favorito(s)!</div>
+        {favoritos.length > 0 && !showOnlyFavorites && (
+          <div className="favorito-counter">
+            ❤️ Você tem {favoritos.length} gato(s) favorito(s)!
+          </div>
+        )}
+
+        {showOnlyFavorites && favoritos.length === 0 && (
+          <div className="empty-message">
+            😿 Você ainda não tem gatinhos favoritos...
+            <br />
+            <span>Clique no 🤍 para adicionar aos favoritos!</span>
+          </div>
         )}
 
         <div className="grid">
@@ -118,15 +138,18 @@ export function Home() {
           })}
         </div>
 
-        {filteredCats.length === 0 && (
+        {filteredCats.length === 0 && !(showOnlyFavorites && favoritos.length === 0) && (
           <div className="empty-message">
-            😿 Nenhum gatinho encontrado...
+            😿 Nenhum gatinho encontrado com esses filtros...
             <br />
-            <button onClick={() => {
-              setSearch("");
-              setGenderFilter("");
-              setSortAge("");
-            }}>
+            <button
+              onClick={() => {
+                setSearch("");
+                setGenderFilter("");
+                setSortAge("");
+                setShowOnlyFavorites(false);
+              }}
+            >
               Limpar filtros 🔄
             </button>
           </div>
