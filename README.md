@@ -17,8 +17,8 @@ Aplicação web para adoção de gatos, desenvolvida com React + TypeScript + Vi
 ## 📸 Preview
 ![Home](./src/assets/splash.png)
 ![Home](./src/assets/Index.png)
-![Home](./src/assets/filters.png)
-![Home](./src/assets/response.png)
+![Home](./src/assets/filtros.png)
+![Home](./src/assets/responsive.png)
 
 ## Como rodar
 
