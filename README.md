@@ -1,7 +1,7 @@
 # MeowFinder
 
 Aplicação web para adoção de gatos, desenvolvida com React + TypeScript + Vite.
-
+# live: https://miaufinder.netlify.app
 # Funcionalidades
 - Listagem de gatos
 - Sistema de favoritos (localStorage)
