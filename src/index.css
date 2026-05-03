@@ -1,4 +1,4 @@
-/* src/index.css - Versão COMPLETA e CORRIGIDA */
+/* src/index.css  */
 
 * {
   margin: 0;
@@ -629,4 +629,123 @@ body {
 @keyframes pulse {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.1); }
+}
+
+/* ========== BOTÕES DO NAVBAR ========== */
+.nav-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.theme-toggle {
+  background: linear-gradient(135deg, #4caf50, #2e7d32);
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: 0.3s ease;
+}
+
+.theme-toggle:hover {
+  transform: scale(1.05);
+}
+
+/* ========== MODO ESCURO ========== */
+[data-theme="dark"] body {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+[data-theme="dark"] .header {
+  background: #0f0f1a;
+  border-bottom-color: #2d2d44;
+}
+
+[data-theme="dark"] .header h1 {
+  color: #a5d6a7;
+}
+
+[data-theme="dark"] .header p {
+  color: #81c784;
+}
+
+[data-theme="dark"] .navbar {
+  background: #0f0f1a;
+  border-bottom-color: #4caf50;
+}
+
+[data-theme="dark"] .nav-top h2 {
+  color: #a5d6a7;
+}
+
+[data-theme="dark"] .card {
+  background: #1a1a2e;
+  border-color: #2d2d44;
+}
+
+[data-theme="dark"] .card h2 {
+  color: #a5d6a7;
+}
+
+[data-theme="dark"] .card p {
+  color: #ccc;
+}
+
+[data-theme="dark"] .card .info span {
+  background: #2d2d44;
+  color: #a5d6a7;
+}
+
+[data-theme="dark"] .filters input,
+[data-theme="dark"] .filters select,
+[data-theme="dark"] .filters-dropdown {
+  background: #1a1a2e;
+  color: white;
+  border-color: #2d2d44;
+}
+
+[data-theme="dark"] .favorito-counter {
+  background: #2d2d44;
+  color: #a5d6a7;
+  border-color: #4caf50;
+}
+
+[data-theme="dark"] .footer {
+  background: linear-gradient(135deg, #0a0a14, #1a1a2e);
+  border-top-color: #2d2d44;
+}
+
+[data-theme="dark"] .empty-message {
+  background: #1a1a2e;
+  color: #a5d6a7;
+  border-color: #2d2d44;
+}
+
+[data-theme="dark"] .favorite-filter-btn {
+  background: #1a1a2e;
+  color: #a5d6a7;
+  border-color: #2d2d44;
+}
+
+[data-theme="dark"] .favorite-filter-btn.active {
+  background: linear-gradient(135deg, #2e7d32, #1b5e20);
+  color: white;
+}
+
+[data-theme="dark"] .toast {
+  background: #1b5e20;
+}
+
+[data-theme="dark"] .splash {
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+}
+
+[data-theme="dark"] .splash-title {
+  color: #a5d6a7;
+}
+
+[data-theme="dark"] .splash-subtitle {
+  color: #81c784;
 }
